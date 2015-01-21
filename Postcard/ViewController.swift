@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMailButtonPressed(sender: UIButton) {
+        // New Comment to test commit
         sender.backgroundColor = UIColor.redColor()
-        
         
         messageLabel.textColor = UIColor.redColor()
         messageLabel.text = enterMessageTextField.text
