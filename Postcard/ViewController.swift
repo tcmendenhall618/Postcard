@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var senderLabel: UILabel!
     
     @IBOutlet weak var messageLabel: UILabel!
     
@@ -33,11 +34,16 @@ class ViewController: UIViewController {
         // New Comment to test commit
         sender.backgroundColor = UIColor.redColor()
         
+        senderLabel.text = "Sent from: " + enterNameTextField.text
+        senderLabel.textColor = UIColor.blueColor()
+        senderLabel.hidden = false
+        
         messageLabel.textColor = UIColor.redColor()
         messageLabel.text = enterMessageTextField.text
         messageLabel.hidden = false
         
         enterNameTextField.text = ""
+        enterNameTextField.resignFirstResponder()
         
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder()
